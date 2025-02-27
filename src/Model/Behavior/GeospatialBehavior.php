@@ -90,10 +90,6 @@ class GeospatialBehavior extends \Cake\ORM\Behavior
             return;
         }
         foreach ($columns as $column => $type) {
-            // Skip if the column is not present in $entity
-            if (!isset($entity->{$column})) {
-                continue;
-            }
             // Skip if the column is not present in $data
             if (!isset($data[$column])) {
                 continue;
